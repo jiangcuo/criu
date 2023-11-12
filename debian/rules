@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+PACKAGE = $(firstword $(shell dh_listpackages))
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
+%:
+	dh ${@} --with python3
+
+override_dh_auto_install:
+	dh_auto_install -- DESTDIR="$(CURDIR)/debian/criu" PREFIX="/usr" LIBEXECDIR="/usr/lib" PYTHON="python3"
+	# Remove amdgpu_plugin manpage until we really provide the plugin
+	$(RM) --verbose $(TMP)/usr/share/man/man1/amdgpu_plugin.1.gz
+
+override_dh_auto_test:
+	# disabled: doesn't work yet
+
+override_dh_strip:
+	dh_strip --ddeb-migration='criu-dbg (<< 1.8-2~)'

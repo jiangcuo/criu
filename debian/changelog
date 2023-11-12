@@ -1,0 +1,842 @@
+criu (3.18) dev; urgency=medium
+
+  * build for loongarch64
+
+ -- Jiangcuo <jiangcuo@bingsin.com>  Sun, 12 Nov 2023 19:18:03 +0800
+
+criu (3.17.1-3) unstable; urgency=medium
+
+  * make: disable '-Wdangling-pointer' warning with gcc 12 (Closes: #1037610)
+  * Declare compliance with Debian policy 4.6.2
+  * Update copyright years for debian/* packaging files
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 05 Aug 2023 07:42:44 +0200
+
+criu (3.17.1-2) unstable; urgency=medium
+
+  * criu: fix conflicting headers (Closes: #1026534)
+  * mount: add definition for FSOPEN_CLOEXEC
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 20 Dec 2022 22:00:51 +0100
+
+criu (3.17.1-1) unstable; urgency=medium
+
+  * New upstream version 3.17.1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 24 Jun 2022 17:04:47 +0200
+
+criu (3.17-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 23 Jun 2022 21:40:43 +0200
+
+criu (3.17-1) experimental; urgency=medium
+
+  * New upstream version 3.17
+  * amdgpu: Set PLUGINDIR to /usr/lib/criu
+  * Update copyright years for debian/* packaging files
+  * debian/copyright: Add copyright stanza for plugins/amdgpu/* files
+  * debian/rules: Do not install amdgpu_plugin(1) manpage
+  * Rename Salsa CI configuration file to debian/salsa-ci.yml
+  * Declare compliance with Debian policy 4.6.1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 14 May 2022 22:20:47 +0200
+
+criu (3.16.1-2) unstable; urgency=medium
+
+  * Explicitly enable FPU on ARM builds to fix FTBFS with gcc-11
+    (Closes: #999680)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 04 Dec 2021 15:04:48 +0100
+
+criu (3.16.1-1) unstable; urgency=medium
+
+  * debian/watch: Switch to watch tagged versions on github releases page
+  * New upstream version 3.16.1
+  * Drop "Convert criu-ns to python3"
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 02 Nov 2021 23:05:12 +0100
+
+criu (3.16-2) unstable; urgency=medium
+
+  * Convert shebang for criu-ns to use python3 (Closes: #994929)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 23 Sep 2021 15:11:46 +0200
+
+criu (3.16-1) unstable; urgency=medium
+
+  * New upstream version 3.16
+    - Includes criu-ns script to run criu in different namespaces
+      (Closes: #929754)
+  * Update copyright years for debian/* packaging files
+  * debian/control: Add Build-Depends on libnftables-dev
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 23 Sep 2021 08:53:22 +0200
+
+criu (3.15-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.1, no changes needed.
+
+  [ Salvatore Bonaccorso ]
+  * Upload to unstable
+  * Declare compliance with Debian policy 4.6.0
+  * debian/control: Drop alternative Recommends on iproute
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 23 Sep 2021 08:18:18 +0200
+
+criu (3.15-1) experimental; urgency=medium
+
+  * New upstream version 3.15
+  * debian/copyright: Add missing 'the' in references to GPL-2 file
+  * debian/copyright: Add license stanza for LGPL-2.1+
+  * debian/copyright: Update copyright information for new files
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 16 Nov 2020 17:42:10 +0100
+
+criu (3.14-1) unstable; urgency=medium
+
+  * New upstream version 3.14
+  * Drop "ppc64le: remove register '1' from clobber list"
+  * Drop "s390x: remove stack pointer from clobber list"
+  * Drop "arm: remove stack pointer from clobber list"
+  * Drop "criu: fix build failure against gcc-10"
+  * Bump Debhelper compat level to 13
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 09 May 2020 10:37:52 +0200
+
+criu (3.13-7) unstable; urgency=medium
+
+  * Fix build failure against gcc-10
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 13 Apr 2020 15:15:56 +0200
+
+criu (3.13-6) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 06 Apr 2020 22:49:20 +0200
+
+criu (3.13-5) experimental; urgency=medium
+
+  * [armhf] remove stack pointer from clobber list
+  * Declare compliance with Debian policy 4.5.0
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 25 Jan 2020 15:36:05 +0100
+
+criu (3.13-4) experimental; urgency=medium
+
+  * [s390x] remove stack pointer from clobber list
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 17 Jan 2020 06:53:16 +0100
+
+criu (3.13-3) experimental; urgency=medium
+
+  * [ppc64el] remove register '1' from clobber list
+  * Update copyright years for debian/* packaging files
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 14 Jan 2020 19:17:15 +0100
+
+criu (3.13-2) experimental; urgency=medium
+
+  * Add Build-Depends on libbsd-dev
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 11 Oct 2019 00:30:06 +0200
+
+criu (3.13-1) experimental; urgency=medium
+
+  * New upstream version 3.13
+  * Add Build-Depends on libgnutls28-dev
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 10 Oct 2019 16:39:06 +0200
+
+criu (3.12-1) experimental; urgency=medium
+
+  * New upstream version 3.12
+  * Update copyright years for debian/* packaging files
+  * Add missing pkg-config to Build-Depends.
+    Thanks to Scott Kitterman
+  * Update to use python3.
+    Build-Depends on python3-all instead of python-all.
+    Drop Depends on python-future, python-ipaddr and change Depends on
+    python-protobuf to python3-protobuf.
+    Replace ${python:Depends} substitution with ${python3:Depends}.
+    Pass --with python3 to dh in debian/rules and pass PYTHON="python3" in
+    the dh_auto_install override.
+    Thanks to Scott Kitterman (Closes: #927104)
+  * Declare compliance with Debian policy 4.4.1
+  * Update .gitlab-ci.yml based on Salsa CI Team's template
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 10 Oct 2019 06:51:02 +0200
+
+criu (3.11-2) experimental; urgency=medium
+
+  * Replace home-made GitLab CI with the standard Salsa pipeline
+  * Bump Debhelper compat level to 12
+  * Declare compliance with Debian policy 4.3.0
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 28 Dec 2018 17:08:26 +0100
+
+criu (3.11-1) experimental; urgency=medium
+
+  * Add an initial Gitlab CI config file
+  * debian/.gitlab-ci.yml: Update image used for Gitlab CI
+  * Update .gitlab-ci.yml based on Salsa CI Team's template
+  * GitLab CI/Lintian: install dpkg-dev, that ships dpkg-architecture, needed
+    to run some Lintian checks
+  * New upstream version 3.11
+  * Declare compliance with Debian policy 4.2.1
+  * debian/copyright: Drop one unused paragraph for removed file upstream
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 08 Nov 2018 08:47:31 +0100
+
+criu (3.10-1) experimental; urgency=medium
+
+  * New upstream version 3.10
+  * Add Depends on python-future
+  * debian/control: Wrap and sort fields
+  * Declare compliance with Debian policy 4.1.5
+  * debian/copyright: Switch Source URL to new location for source repository
+  * debian/control: Use HTTPS transport protocol for Homepage URI
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 12 Jul 2018 22:13:17 +0200
+
+criu (3.9-1) experimental; urgency=medium
+
+  * New upstream version 3.9
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 22 May 2018 10:54:20 +0200
+
+criu (3.8.1-1) unstable; urgency=medium
+
+  * Upload to unstable
+  * New upstream version 3.8.1
+  * Declare compliance with Debian policy 4.1.4
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 05 Apr 2018 23:09:57 +0200
+
+criu (3.8-1) experimental; urgency=medium
+
+  * Remove unnecessary dh argument --parallel.
+    Debhelper compat level 10 enables by default --parallel for all
+    buildsystems that support parallel building.
+  * New upstream version 3.8
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 19 Mar 2018 10:00:01 +0100
+
+criu (3.7-2) experimental; urgency=medium
+
+  * Update copyright years for debian/* packaging files
+  * Declare compliance with Debian policy 4.1.3
+  * Update Vcs-* fields for switch to salsa.debian.org
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 19 Mar 2018 09:45:41 +0100
+
+criu (3.7-1) experimental; urgency=medium
+
+  * New upstream version 3.7
+  * Bump Debhelper compat level to 11
+  * Declare compliance with Debian policy 4.1.2
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 19 Dec 2017 21:58:58 +0100
+
+criu (3.6-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * Set Rules-Requires-Root to no
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 05 Nov 2017 15:31:39 +0100
+
+criu (3.6-1) experimental; urgency=medium
+
+  * New upstream version 3.6
+  * Declare compliance with Debian policy 4.1.1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 27 Oct 2017 13:36:05 +0200
+
+criu (3.5-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 28 Sep 2017 13:41:44 +0200
+
+criu (3.5-1) experimental; urgency=medium
+
+  * New upstream version 3.5 (Clay Jay)
+  * Use HTTPS transport protocol in watch URL
+  * debian/watch: Bump format to version 4.
+    Use @PACKAGE@, @ANY_VERSION@ and @ARCHIVE_EXT@ substitutions.
+  * debian/copyright: Add copyright stanza for newly included file
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 28 Sep 2017 08:52:05 +0200
+
+criu (3.4-3) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 24 Aug 2017 07:24:23 +0200
+
+criu (3.4-2) experimental; urgency=medium
+
+  * Enable support for arm64 and s390x.
+    Thanks to Dimitri John Ledkov for testing. (Closes: #791937, #873002)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 23 Aug 2017 23:10:56 +0200
+
+criu (3.4-1) experimental; urgency=medium
+
+  * New upstream version 3.4
+  * Declare compliance with Debian policy 4.1.0
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 23 Aug 2017 22:54:13 +0200
+
+criu (3.3-1) experimental; urgency=medium
+
+  * New upstream version 3.3
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 23 Jul 2017 19:05:10 +0200
+
+criu (3.2.1-1) experimental; urgency=medium
+
+  * New upstream version 3.2.1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 30 Jun 2017 07:48:42 +0200
+
+criu (3.2-1) experimental; urgency=medium
+
+  * New upstream version 3.2
+  * Declare compliance with Debian policy 4.0.0
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 23 Jun 2017 13:19:49 +0200
+
+criu (3.1-1) experimental; urgency=medium
+
+  * New upstream version 3.1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 26 May 2017 07:25:50 +0200
+
+criu (3.0-1) experimental; urgency=medium
+
+  * New upstream version 3.0
+  * debian/copyright: Update copyright information for new files
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 26 May 2017 07:18:51 +0200
+
+criu (2.12.1-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 15 Apr 2017 17:22:39 +0200
+
+criu (2.12.1-1) experimental; urgency=medium
+
+  * New upstream version 2.12.1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 03 Apr 2017 09:07:19 +0200
+
+criu (2.12-1) experimental; urgency=medium
+
+  * New upstream version 2.12
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 10 Mar 2017 12:28:16 +0100
+
+criu (2.11.1-1) experimental; urgency=medium
+
+  * New upstream version 2.11.1
+  * debian/rules: Cleanup dh_auto_install override.
+    No need anymore to manually clean up /usr/lib/systemd/system, since not
+    installed anymore by upstream.
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 02 Mar 2017 10:16:48 +0100
+
+criu (2.10-1) experimental; urgency=medium
+
+  * New upstream version 2.10
+  * Update copyright years for debian/* packaging files
+  * Drop 0001-build-nmk-Filter-out-Wl-flags-from-linking-builtin-t.patch
+  * Add Build-Depends on libnet1-dev
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 19 Jan 2017 20:50:21 +0100
+
+criu (2.9-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 26 Dec 2016 10:49:35 +0100
+
+criu (2.9-1) experimental; urgency=medium
+
+  * New upstream version 2.9
+  * Install crit.1 provided by upstream
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 13 Dec 2016 21:20:16 +0100
+
+criu (2.8-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 28 Nov 2016 13:30:09 +0100
+
+criu (2.8-1) experimental; urgency=medium
+
+  * New upstream version 2.8
+  * debian/rules: Build enabling all hardening flags.
+    Fixes "FTBFS: ld: unrecognized option
+    '-specs=/usr/share/dpkg/no-pie-link.specs'"
+    Thanks to Adrian Bunk <bunk@stusta.de> (Closes: #844293)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 28 Nov 2016 08:40:13 +0100
+
+criu (2.7-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 17 Oct 2016 20:13:09 +0200
+
+criu (2.7-1) experimental; urgency=medium
+
+  * New upstream version 2.7
+  * Update copyright years for upstream files
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 17 Oct 2016 10:47:15 +0200
+
+criu (2.6-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 08 Oct 2016 19:54:24 +0200
+
+criu (2.6-1) experimental; urgency=medium
+
+  * New upstream version 2.6
+  * Bump Debhelper compat level to 10
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 13 Sep 2016 08:06:16 +0200
+
+criu (2.5-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 19 Aug 2016 10:24:28 +0200
+
+criu (2.5-1) experimental; urgency=medium
+
+  * Imported Upstream version 2.5
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 16 Aug 2016 15:34:44 +0200
+
+criu (2.4-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 22 Jul 2016 14:12:06 +0200
+
+criu (2.4-1) experimental; urgency=low
+
+  * Imported Upstream version 2.4
+  * Add copyright information for new included file
+  * Set LIBEXECDIR to /usr/lib during installation of files.
+    Make sure that systemd-autofs-restart.sh helper is installed into
+    /usr/lib/criu/scripts/.
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 14 Jul 2016 07:24:53 +0200
+
+criu (2.3-3) unstable; urgency=medium
+
+  * build: nmk -- Filter out -Wl flags from linking builtin targets
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 30 Jun 2016 18:03:48 +0200
+
+criu (2.3-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 28 Jun 2016 15:51:45 +0200
+
+criu (2.3-1) experimental; urgency=medium
+
+  * Imported Upstream version 2.3
+  * debian/copyright: Use HTTPS transport protocol for Format URL
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 17 Jun 2016 07:09:17 +0200
+
+criu (2.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.2
+  * Drop build-Don-t-pass-wrap-on-every-linking-file-only-for.patch
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 20 May 2016 14:18:04 +0200
+
+criu (2.1-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 12 May 2016 17:22:37 +0200
+
+criu (2.1-1) experimental; urgency=medium
+
+  * Imported Upstream version 2.1
+  * Declare compliance with Debian policy 3.9.8
+  * Don't pass --wrap on every linking file only for CRIU target only
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 05 May 2016 14:28:03 +0200
+
+criu (2.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 08 Mar 2016 21:14:24 +0100
+
+criu (2.0-1) experimental; urgency=medium
+
+  * Imported Upstream version 2.0
+  * Add Build-Depends on libnl-3-dev
+  * Add Build-Depends on libcap-dev
+  * Use HTTPS transport protocol for Vcs-Git URI
+  * Update copyright years for debian/* packaging files
+  * Declare compliance with Debian policy 3.9.7
+  * debian/copyright: Update file paths after upstream file reorganisation
+  * Sync manpage for crit to include short explanation for new subcommands
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 07 Mar 2016 20:19:11 +0100
+
+criu (1.8-2) unstable; urgency=low
+
+  * Upload to unstable
+  * Migrate from criu-dbg to ddebs.
+    Update versioned Build-Depends on debhelper to 9.20151219 to ensure
+    generation of dbgsym packages.
+    Drop criu-dbg binary package stanza from debian/control file.
+    debian/rules: Use --ddeb-migration argument to dh_strip to migrate from
+    criu-dbg to ddebs.
+  * debian/copyright: Drop unused Expat license stanza
+  * Remove empty /usr/lib/systemd/system directory
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 26 Dec 2015 20:35:50 +0100
+
+criu (1.8-1) experimental; urgency=low
+
+  * Imported Upstream version 1.8
+  * Drop 01-reproducible-build.diff (applied upstream)
+  * Drop copyright stanza for sd-daemon.[ch]
+    Files dropped upstream from source.
+  * Drop override rules to remove systemd service and logrotate files.
+    Upstream does not provide anymore a criu systemd service.
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 15 Dec 2015 20:42:01 +0100
+
+criu (1.7.2-2) unstable; urgency=medium
+
+  * Add missing copyright stanza for included sd-daemon.[ch] files
+  * Enable ppc64el support.
+    Thanks to Breno Leitao <brenohl@br.ibm.com> and Laurent Dufour
+    <ldufour@linux.vnet.ibm.com> (Closes: #788491)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 05 Dec 2015 11:42:51 +0100
+
+criu (1.7.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.7.2
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 29 Oct 2015 15:42:58 +0100
+
+criu (1.7-3) unstable; urgency=medium
+
+  * Add 01-reproducible-build.diff patch.
+    Make build reproducible.
+    Thanks to Chris Lamb <lamby@debian.org> (Closes: #801211)
+  * Don't install criu systemd service files and logrotate script.
+    Don't install criu.service, criu.socket and corresponding logrotate
+    script for criu.service. (Closes: #792008)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 08 Oct 2015 12:30:33 +0200
+
+criu (1.7-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 12 Sep 2015 07:55:51 +0200
+
+criu (1.7-1) experimental; urgency=low
+
+  * Imported Upstream version 1.7
+  * Add copyright stanza for arch/ppc64/misc.S
+  * Drop 0001-Fix-spelling-errors-in-documentation.patch patch
+  * Drop 0002-Fix-spelling-error-in-usage-text.patch patch
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 07 Sep 2015 12:35:44 +0200
+
+criu (1.6.1-1) experimental; urgency=low
+
+  * Imported Upstream version 1.6.1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 05 Sep 2015 07:52:03 +0200
+
+criu (1.6-2) unstable; urgency=low
+
+  * Upload to unstable
+  * Fix position for optional arguments in crit's manpage
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 25 Jun 2015 07:37:25 +0200
+
+criu (1.6-1) experimental; urgency=low
+
+  * Imported Upstream version 1.6
+  * Drop 0002-unused-function.patch patch
+  * Drop crit-install-prefix.patch patch
+  * Update copyright years for upstream files
+  * Add 0001-Fix-spelling-errors-in-documentation.patch patch
+  * Add 0002-Fix-spelling-error-in-usage-text.patch patch
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 02 Jun 2015 12:01:12 +0200
+
+criu (1.5.2-1) unstable; urgency=low
+
+  * Imported Upstream version 1.5.2
+  * Update copyright years for debian/* packaging files
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 28 Apr 2015 08:57:13 +0200
+
+criu (1.5.1-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 26 Apr 2015 11:35:33 +0200
+
+criu (1.5.1-1) experimental; urgency=medium
+
+  * Imported Upstream version 1.5 and 1.5.1 (Closes: #780213)
+  * Add Build-Depends on libprotobuf-dev and protobuf-compiler
+  * Install new crit utility.
+    Add Build-Depends on dh-python and python-all (>= 2.6.6-3~).
+    Use the python2 dh addon in debian/rules
+    Add Depends on ${python:Depends} to add proper runtime dependencies on
+    python for crit.
+  * Correct installation path for crit utility
+  * Add Depends on python-ipaddr for crit utility
+  * Add Depends on python-protobuf for crit utility
+  * Add minimal manpage for the crit
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 06 Apr 2015 11:51:48 +0200
+
+criu (1.4-1) experimental; urgency=medium
+
+  * Imported Upstream version 1.4
+  * Refresh 0002-unused-function.patch patch
+  * Declare compliance with Debian Policy 3.9.6
+  * Install contrib/docker_cr.sh to examples
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 05 Dec 2014 21:32:13 +0100
+
+criu (1.3.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.3.1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 13 Sep 2014 16:26:08 +0200
+
+criu (1.3-1) unstable; urgency=low
+
+  * Imported Upstream version 1.3
+  * Update Vcs-Browser URL to cgit web frontend
+  * Drop spelling-error-in-manpage.patch patch
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 01 Sep 2014 17:18:49 +0200
+
+criu (1.3~rc2-5) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 01 Aug 2014 11:53:05 +0200
+
+criu (1.3~rc2-4) experimental; urgency=low
+
+  * New Maintainer (Closes: #756087)
+  * Wrap and sort fields in debian/control file
+  * Change Vcs-Fields to the collab-maint repository on alioth
+  * Update Build-Depends on libprotobuf-c-dev rather than libprotobuf-c0-dev
+  * Drop override for dh_builddeb.
+    Default compression for dpkg-deb when building a package is now xz.
+  * Drop explicit xz compression option through debian/source/options
+  * Add debian/watch file to scan upstream sources for new releases
+  * Add myself to copyright holders for debian/* packaging
+  * Update Upstream-Name in debian/copyright to CRIU
+  * Update location of upstream git repository in debian/copyright Source field
+  * Update patch header for 0002-unused-function.patch
+  * Add spelling-error-in-manpage.patch patch.
+    Fix spelling errors in manpage.
+  * Drop override for dh_auto_clean.
+    Explicit override to clean Documentation build is not needed anymore.
+  * Drop override for dh_auto_build.
+    Explicit override to build Documentation is not needed.
+  * Drop 0001-documentation.patch patch
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 31 Jul 2014 13:42:53 +0200
+
+criu (1.3~rc2-3) unstable; urgency=low
+
+  * I don't care anymore, not worth it.. orphaning.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Fri, 25 Jul 2014 20:54:56 +0200
+
+criu (1.3~rc2-2) unstable; urgency=low
+
+  * Adding patch from Arthur Marble <arthur@info9.net> to fix FTBFS with
+    clang (Closes: #753845).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Wed, 16 Jul 2014 22:25:21 +0200
+
+criu (1.3~rc2-1) unstable; urgency=low
+
+  * Merging upstream version 1.3~rc2.
+  * Making wheezy-compatible alternative recommends to iproute2 (Closes:
+    #753706).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 05 Jul 2014 08:53:47 +0200
+
+criu (1.3~rc1-1) unstable; urgency=low
+
+  * Merging upstream version 1.3~rc1.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 27 Apr 2014 11:59:07 +0200
+
+criu (1.2-2) unstable; urgency=low
+
+  * Building with dh --parallel.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 31 Mar 2014 19:45:46 +0200
+
+criu (1.2-1) experimental; urgency=low
+
+  * Merging upstream version 1.2.
+  * Updating year in copyright for 2014.
+  * Refreshing documentation.patch.
+  * Updating rules for logrotate files installation.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 01 Mar 2014 13:38:13 +0100
+
+criu (1.1-1) experimental; urgency=low
+
+  * Merging upstream version 1.1.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 01 Feb 2014 06:39:06 +0100
+
+criu (1.1~rc2-1) experimental; urgency=low
+
+  * Merging upstream version 1.1~rc2.
+  * Refreshing documentation.patch.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 26 Jan 2014 19:15:52 +0100
+
+criu (1.1~rc1-1) experimental; urgency=low
+
+  * Merging upstream version 1.1~rc1.
+  * Updating year in copyright file for 2014.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Fri, 17 Jan 2014 06:15:52 +0100
+
+criu (1.0-1) experimental; urgency=low
+
+  * Updating to standards version 3.9.5.
+  * Merging upstream version 1.0.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 25 Nov 2013 20:04:24 +0100
+
+criu (0.8-1) experimental; urgency=low
+
+  * Merging upstream version 0.8.
+  * Adding another comma in depends list for consistency reasons.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Tue, 22 Oct 2013 23:37:03 +0200
+
+criu (0.7-1) experimental; urgency=low
+
+  * Merging upstream version 0.7.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Tue, 03 Sep 2013 15:00:44 +0200
+
+criu (0.6-2) experimental; urgency=low
+
+  * Adding vcs fields.
+  * Wrapping control fields.
+  * Updating vcs fields.
+  * Removing crtools transitional packaging now that crtools has been
+    removed (was post-wheezy introduced).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Fri, 16 Aug 2013 11:37:17 +0200
+
+criu (0.6-1) experimental; urgency=low
+
+  * Merging upstream version 0.6.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 15 Jul 2013 19:10:45 +0200
+
+criu (0.5+20130521-2) experimental; urgency=low
+
+  * Update packaging for upstreams rename of crtools to criu.
+  * Adding transitional package for crtools.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Thu, 23 May 2013 11:01:32 +0200
+
+crtools (0.5+20130521-1) experimental; urgency=low
+
+  * Merging upstream version 0.5+20130521:
+    - fixes FTBFS with eglibc 2.17 (Closes: #701265).
+  * Building package on armhf.
+  * Rediffing documentation.patch.
+  * Using upstreams install target rather than debhelper files.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Thu, 23 May 2013 09:52:14 +0200
+
+crtools (0.4-2) unstable; urgency=low
+
+  * Removing all references to my old email address.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 10 Mar 2013 20:23:54 +0100
+
+crtools (0.4-1) unstable; urgency=low
+
+  * Merging upstream version 0.4.
+  * Including upstreams credits file as documentation.
+  * Adding asciidoc and xmlto to build-depends.
+  * Adding patch to remove non-working echo entries from documentation
+    makefile.
+  * Building and including crtools manpage.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Tue, 26 Feb 2013 13:11:20 +0100
+
+crtools (0.3-1) unstable; urgency=low
+
+  * Merging upstream version 0.3.
+  * Updating years in copyright file.
+  * Dropping dpkg-source compression levels.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 28 Jan 2013 06:35:54 +0100
+
+crtools (0.2-2) unstable; urgency=low
+
+  * Recommending iproute instead of iproute2 (Closes: #689050).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 07 Oct 2012 11:30:39 +0200
+
+crtools (0.2-1) unstable; urgency=low
+
+  * Merging upstream version 0.2.
+  * Updating standards version to 3.9.4.
+  * Adding iproute to recommends.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 24 Sep 2012 22:34:24 +0200
+
+crtools (0.1-2) unstable; urgency=low
+
+  * Restricting architectures to linux on amd64 only (Closes: #683416).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Tue, 31 Jul 2012 19:56:38 +0200
+
+crtools (0.1-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Wed, 25 Jul 2012 21:25:51 +0200

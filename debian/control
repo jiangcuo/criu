@@ -1,0 +1,38 @@
+Source: criu
+Section: admin
+Priority: optional
+Maintainer: Salvatore Bonaccorso <carnil@debian.org>
+Build-Depends:
+ asciidoc,
+ debhelper-compat (= 13),
+ dh-python,
+ libbsd-dev,
+ libcap-dev,
+ libgnutls28-dev,
+ libnet1-dev,
+ libnftables-dev,
+ libnl-3-dev,
+ libprotobuf-c-dev,
+ libprotobuf-dev,
+ pkg-config,
+ protobuf-c-compiler,
+ protobuf-compiler,
+ python3-all,
+ xmlto
+Standards-Version: 4.6.2
+Homepage: https://www.criu.org/
+Vcs-Browser: https://salsa.debian.org/debian/criu
+Vcs-Git: https://salsa.debian.org/debian/criu.git
+Rules-Requires-Root: no
+
+Package: criu
+Architecture: amd64 arm64 armhf ppc64el s390x
+Depends:
+ python3-protobuf,
+ ${misc:Depends},
+ ${python3:Depends},
+ ${shlibs:Depends}
+Recommends: iproute2
+Description: checkpoint and restore in userspace
+ criu contains the utilities to checkpoint and restore processes in
+ userspace.

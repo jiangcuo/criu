@@ -1,0 +1,3 @@
+criu-fix-conflicting-headers.patch
+mount-add-definition-for-FSOPEN_CLOEXEC.patch
+make-disable-Wdangling-pointer-warning-with-gcc-12.patch
